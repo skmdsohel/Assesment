@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function myFunction() {
+        var tv=['sony','mi'];
+        var bike=['hero','yamaha'];
+        var car=['skoda','BMW'];
+        var printThis='<ul>';
+        var x = document.getElementById("mySelect").value;
+        if(x==0){
+            tv.forEach(element => {
+                printThis += "<li>"+element+"</li>";
+            });
+        }
+        else if(x==1){
+            bike.forEach(element => {
+                printThis += "<li>"+element+"</li>";
+            });
+        }
+        else if(x==2){
+            car.forEach(element => {
+                printThis += "<li>"+element+"</li>";
+            });
+        }
+        document.getElementById("demo").innerHTML = printThis;
+    }
+
+    </script>
+</head>
+
+<body>
+    <select id="mySelect" onchange="myFunction()">
+        <option >--select--
+        <option value="0">Tv
+        </option>
+        <option value="1">Bike
+        <option value="2">Car
+      </select>
+      
+      <p>Details:</p>
+      
+      <div id="demo"></div>
+</body>
+</html>

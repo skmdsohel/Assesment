@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+        function validateform(){  
+            var name=document.myform.name.value;  
+            var password=document.myform.password.value;  
+            var email=document.myform.password.value;  
+            var phone=document.myform.password.value; 
+            var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
+            
+
+            if (name==null || name==""){  
+                alert("Name can't be blank"); 
+                name.focus() ; 
+                
+            }if(password.length<6 || password==null || password==""){  
+                alert("Password must be at least 6 characters long.");  
+                password.focus() ; 
+               
+            }if(email==null || email==""){  
+                alert("email cant be null.");  
+                email.focus() ; 
+            }
+            if(phone.length<10 || phone.length>13 || phone==""){  
+                alert("Phone number must be 10 to 13 digits.");  
+                email.focus() ;                 
+            }   
+        }  
+    </script>  
+
+    <body> 
+        
+        <h3>Registration Form</h3>
+        <form name="myform" onsubmit="return validateform(this)">  
+            Name: <input type="text" name="name"><br/>  
+            Password: <input type="password" name="password" ><br/>  
+            email: <input type="email" name="email"><br/>  
+            phone: <input type="text" name="phone"><br/>  
+            <input type="submit" value="register">  
+        </form> 
+    </body>
+</html>
