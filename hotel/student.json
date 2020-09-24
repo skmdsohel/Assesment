@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Surabhi",
+    "city": "Mysore",
+    "type": "non-veg",
+    "cuisines": ["Indian", "Chinese"]
+  },
+  {
+    "name": "Akshaya",
+    "city": "Mysore",
+    "type": "veg",
+    "cuisines": ["Indian", "Chinese"]
+  },
+  {
+    "name": "Palace",
+    "city": "Mysore",
+    "type": "non-veg",
+    "cuisines": ["Indian", "Chinese"]
+  }
+
+]
